@@ -10,29 +10,77 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    background-color: #effcf0;
+    background-image: url("assets/photo/girl-1472185_1280.jpg");
     background-size: cover;
-    background-image: url("assets/photo/clinin.jpg");
+    background-position: center;
+    overflow: hidden;
+    /* position: relative; */
 }
+
+.haddings:hover {
+    animation-play-state: paused;
+}
+
+.haddings {
+    animation: slider 3s forwards infinite;
+    margin: auto;
+    -webkit-animation: slider 3s forwards infinite;
+    line-height: 50px;
+}
+
+.haddings::after {
+    animation: slider 1s ease-out;
+    animation-delay: 4s;
+    opacity: 1;
+    -webkit-animation: slider 1s ease-out;
+}
+
+@keyframes slider {
+    from {
+        transform: translatex(100%);
+        /* -webkit-transform: translatex(100%);
+        -moz-transform: translatex(100%);
+        -ms-transform: translatex(100%);
+        -o-transform: translatex(100%); */
+        opacity: 0;
+    }
+    to {
+        transform: translatex(30px);
+        /*-webkit-transform: translatex(0);
+        -moz-transform: translatex(30px);
+        -ms-transform: translatex(30px);
+        -o-transform: translatex(30px);
+        */
+        opacity: 1;
+        -webkit-transform: translatex(30px);
+    }
+}
+
+
+/* .haddings {
+    text-align: start;
+} */
 
 .haddings h1 {
     font-weight: bolder;
     font-size: 60px;
     height: auto;
-    color: transparent;
-    background: linear-gradient( to right, rgb(90, 166, 196), black, pink);
-    -webkit-background-clip: text;
+    color: rgb(61, 227, 227);
+    padding-left: 30px;
 }
 
 .iconn {
     margin-top: 10px;
+    padding-left: 30px;
 }
 
 .haddings h2 {
     font-weight: bolder;
     font-size: 40px;
-    color: transparent;
-    background: linear-gradient( to right, rgb(91, 176, 210), black, pink);
-    -webkit-background-clip: text;
+    color: skyblue;
+    padding-left: 30px;
 }
 
 .parcent {
@@ -60,7 +108,6 @@
     background-color: rgb(252, 255, 254);
     display: flex;
     justify-content: space-around;
-    z-index: 1005;
 }
 
 .about a:hover {
@@ -72,6 +119,7 @@ nav {
     left: 0;
     right: 0;
     top: 0;
+    z-index: 10000;
 }
 
 .about {
@@ -102,6 +150,14 @@ nav {
     margin-right: 20px;
 }
 
+.fa-search:hover {
+    color: #e6e6e6;
+}
+
+.fa-cart-shopping:hover {
+    color: #000000;
+}
+
 .search a {
     margin-left: 30px;
     color: #3b5959;
@@ -118,6 +174,7 @@ nav {
     display: flex;
     width: 100%;
     height: auto;
+    margin-top: 20px;
     background-color: rgb(252, 255, 254);
     align-items: center;
     background: linear-gradient( to right, #e6e6e6, rgb(241, 232, 233), rgb(255, 255, 255));
@@ -171,18 +228,21 @@ nav {
 .image img {
     width: 35vw;
     height: auto;
+    transform: translateY(10px);
 }
 
 .fa-user {
     margin-top: 10px;
 }
 
+.fa-user:hover {
+    color: #000000;
+}
+
 .store {
     height: auto;
     width: 100%;
     background-color: beige;
-    margin: 0;
-    padding: 0;
 }
 
 .had h1 {
@@ -210,6 +270,19 @@ nav {
 .itemeee img,
 .itemeeee img {
     width: 140px;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+}
+
+.itemeeee img:hover {
+    transform: translatez(20px);
+    -webkit-transform: translateZ(20px);
+    -moz-transform: translateZ(20px);
+    -ms-transform: translateZ(20px);
+    -o-transform: translateZ(20px);
 }
 
 .item,
@@ -220,6 +293,7 @@ nav {
 .itemeeee {
     padding-left: 30px;
     margin-top: 20px;
+    transform: translateY(10px);
 }
 
 .nameee a,
@@ -261,14 +335,15 @@ nav {
     /* box-shadow: 4px 4px 8px #000000; */
     /* margin-left: 50px; */
     /* margin-top: 40px; */
+    transform: translateY(10px);
 }
 
 .imo {
     width: 19vw;
     margin-left: 50px;
     margin-top: 30px;
-    height: 63vh;
-    border: 0.5px solid rgb(182, 182, 182);
+    height: auto;
+    box-shadow: 4px 4px 8px #000000;
 }
 
 .hadd {
@@ -313,22 +388,25 @@ nav {
 }
 
 .click {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
-}
-
-.shop-button {
     background-color: #3b5959;
-    border-radius: 6px;
-    font-weight: 500;
-    padding: 2vh 2vw;
-    color: white !important;
-    box-shadow: 0 0 2px black;
-    transition: 0.2s ease-out;
-    text-decoration: none;
+    height: 5vh;
+    padding-top: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-.shop-button:hover {
+.click a {
+    color: white;
+    font-weight: bold;
+}
+
+.click:hover {
     background-color: rgb(87, 107, 112);
     color: #7d9b9b;
 }
@@ -467,7 +545,7 @@ nav {
     margin: 0;
     -webkit-animation: slidee 15s linear infinite;
     width: 100%;
-    height: auto;
+    height: 200px;
 }
 
 @keyframes slidee {
@@ -604,6 +682,13 @@ del {
     .about {
         display: none;
     }
+    nav {
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 10000;
+    }
     .nav input {
         display: block;
         height: 30px;
@@ -648,8 +733,10 @@ del {
         /* position: relative; */
     }
     .slider {
-        background-image: url("assets/photo/clinin.jpg");
+        background-image: url("assets/photo/girl-1472185_1280.jpg");
         background-size: cover;
+        background-position: center;
+        overflow: hidden;
     }
     .haddings h1 {
         font-weight: bolder;
@@ -689,11 +776,11 @@ del {
     }
     .forward {
         display: flex;
-        animation: slidee 20s linear infinite;
+        animation: slidee 15s linear infinite;
         margin: 0;
-        -webkit-animation: slidee 20s linear infinite;
+        -webkit-animation: slidee 15s linear infinite;
         width: 100%;
-        height: auto;
+        height: 200px;
     }
     @keyframes slidee {
         0% {
@@ -813,10 +900,6 @@ del {
     /* .dicount {
         text-align: center;
     } */
-    .offdd {
-        text-align: center;
-        margin-top: 0px;
-    }
     .hadd {
         width: 100%;
         display: flex;
@@ -856,19 +939,26 @@ del {
     .fa-indian-rupee-sign {
         font-size: 12px;
     }
-    .shop-button {
-        background-color: #3b5959;
-        border-radius: 6px;
-        font-weight: 500;
-        padding: 2px 4vw;
-        height: 20vh;
-        color: white !important;
-        box-shadow: 0 0 2px black;
-        transition: 0.2s ease-out;
-        text-decoration: none;
-    }
     .click {
-        margin-top: 7px;
+        margin-top: 10px;
+        text-align: center;
+        background-color: #3b5959;
+        height: 5vh;
+        padding-top: 2px;
+        font-size: 16px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+    .click a {
+        color: white;
+        font-weight: bold;
+    }
+    .click:hover {
+        background-color: rgb(87, 107, 112);
+        color: #7d9b9b;
     }
     del {
         padding-left: 5px;
