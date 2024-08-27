@@ -229,6 +229,10 @@ nav {
     width: 35vw;
     height: auto;
     transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
 }
 
 .fa-user {
@@ -545,7 +549,7 @@ nav {
     margin: 0;
     -webkit-animation: slidee 15s linear infinite;
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 
 @keyframes slidee {
@@ -628,7 +632,6 @@ del {
 
 .new {
     width: 100%;
-    margin-top: 50px;
     text-align: center;
 }
 
@@ -846,6 +849,7 @@ del {
     .nameeee,
     .nameeeee {
         width: 20vw;
+        padding-top: 60px;
         text-align: center;
     }
     .store {
